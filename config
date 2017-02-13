@@ -1,0 +1,31 @@
+# Copy this file to "config" and edit these options to appropriate
+# values for your local setup.
+
+root=/home/shorne/work/openrisc/crosstool
+
+# Where are the various source trees
+BINUTILS_SRC=${root}/binutils-2.26
+GCC_SRC=${root}/gcc-5.4.0
+# Only if you want to build kernels, ignore otherwise:
+KERNEL_SRC=/somewhere/kernel
+
+# Where to install the cross toolchains
+PREFIX=${root}/cross
+
+
+# Extra configure flags
+EXTRA_BINUTILS_CONF=""
+EXTRA_GCC_CONF=""
+# Ex.: EXTRA_GCC_CONF="--with-mpfr=/somewhere/mpfr-2.4.1 --with-gmp=/somewhere/gmp-4.2.4"
+
+# Options for make
+MAKEOPTS="-j5"
+# Example: MAKEOPTS=-j9
+
+# Compiler self-checks, use "release" for a fast compiler, use "yes,rtl,tree"
+# for lots of checking
+CHECKING=release
+#CHECKING=yes,rtl,tree
+
+# Which echo to use.  Should support -e
+ECHO=/bin/echo
